@@ -17,6 +17,8 @@ function handleFormSubmit(formId, successId, errorId) {
     const successElement = document.getElementById(successId);
     const errorElement = document.getElementById(errorId);
     
+    if (!form) return; // Guard clause in case form doesn't exist
+    
     form.addEventListener('submit', function(e) {
         e.preventDefault();
         errorElement.classList.add('hidden');
@@ -36,13 +38,12 @@ function handleFormSubmit(formId, successId, errorId) {
             return;
         }
         
-        // Simulate form submission success
-        // In a real application, you would send this data to your server or an email service
-        console.log('Form submitted:', formData);
+        // Simulate sending to email service (shaunraj46@gmail.com)
+        console.log('Form submitted to shaunraj46@gmail.com:', formData);
         
         // You would replace this with actual form submission code, e.g.:
         /*
-        fetch('https://api.example.com/submit-form', {
+        fetch('https://formsubmit.co/shaunraj46@gmail.com', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -86,7 +87,6 @@ function handleFormSubmit(formId, successId, errorId) {
 
 // Initialize form handlers
 handleFormSubmit('contact-form', 'form-success', 'form-error');
-handleFormSubmit('contact-form-bottom', 'form-success-bottom', 'form-error-bottom');
 
 // FAQ interactions
 const faqItems = document.querySelectorAll('.faq-item');
