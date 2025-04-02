@@ -1,130 +1,395 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ranked - AI Lead Analysis Tool</title>
-  <link rel="stylesheet" href="css/styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranked - AI Lead Analysis Tool</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gray-900 text-white">
-  <!-- Navigation -->
-  <nav class="fixed w-full z-50 bg-gray-900">
-    <div class="container mx-auto px-4">
-      <div class="flex justify-between items-center h-16">
-        <div class="flex items-center">
-          <div class="w-10 h-10 bg-emerald-500 rounded-lg flex items-center justify-center mr-2">
-            <i class="fas fa-chart-bar text-white"></i>
-          </div>
-          <span class="text-2xl font-bold text-emerald-400">Ranked</span>
-        </div>
-        <div class="hidden md:flex items-center space-x-6">
-          <a href="#how-it-works" class="text-white hover:text-emerald-400 transition">How It Works</a>
-          <a href="#benefits" class="text-white hover:text-emerald-400 transition">Benefits</a>
-          <a href="#contact" class="text-white hover:text-emerald-400 transition">Contact</a>
-          <a href="#contact" class="bg-emerald-500 px-4 py-2 rounded-lg text-white hover:bg-emerald-600 transition">Contact Us</a>
-        </div>
-        <div class="flex md:hidden">
-          <button type="button" class="mobile-menu-button text-white">
-            <i class="fas fa-bars"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Mobile menu -->
-    <div class="mobile-menu hidden md:hidden">
-      <div class="px-2 pt-2 pb-3 space-y-1">
-        <a href="#how-it-works" class="block px-3 py-2 text-white hover:bg-gray-800">How It Works</a>
-        <a href="#benefits" class="block px-3 py-2 text-white hover:bg-gray-800">Benefits</a>
-        <a href="#contact" class="block px-3 py-2 text-white hover:bg-gray-800">Contact</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <section id="hero" class="pt-24 pb-20">
-    <div class="container mx-auto px-4">
-      <div class="max-w-3xl mx-auto text-center">
-        <h1 class="text-5xl font-bold leading-tight mb-4">
-          Let AI Tell You Who's<br>
-          <span class="text-emerald-400">Worth Your Time.</span>
-        </h1>
-        <p class="text-lg text-gray-400 mb-6">
-          Upload your leads and get AI-enriched insights with Ranked. Our proprietary scoring system prioritizes prospects, identifies opportunities, and helps you close deals faster.
-        </p>
-        <div class="flex flex-wrap justify-center gap-4 mb-10">
-          <a href="#contact" class="bg-emerald-500 px-6 py-3 rounded-lg text-white font-medium flex items-center hover:bg-emerald-600 transition">
-            Get Started <i class="fas fa-arrow-right ml-2"></i>
-          </a>
-          <a href="#how-it-works" class="border border-gray-600 px-6 py-3 rounded-lg text-white font-medium hover:bg-gray-800 transition">
-            Learn More
-          </a>
-        </div>
-
-        <!-- Dashboard Preview Card -->
-        <div class="bg-gray-800 rounded-lg p-6 shadow-lg">
-          <div class="mb-4">
-            <div class="text-sm text-gray-400">Dashboard Analytics Settings</div>
-          </div>
-          <div class="grid grid-cols-2 gap-6">
-            <div>
-              <div class="text-sm text-gray-400">Total Leads</div>
-              <div class="text-xl font-bold">1,247</div>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="w-10 h-10 bg-emerald-500 rounded-lg flex items-center justify-center mr-2">
+                        <i class="fas fa-chart-bar text-white"></i>
+                    </div>
+                    <span class="text-2xl font-bold text-emerald-400">Ranked</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#how-it-works" class="text-white hover:text-emerald-400 transition">How It Works</a>
+                    <a href="#benefits" class="text-white hover:text-emerald-400 transition">Benefits</a>
+                    <a href="#contact" class="text-white hover:text-emerald-400 transition">Contact</a>
+                    <a href="#contact" class="bg-emerald-500 px-4 py-2 rounded-lg text-white hover:bg-emerald-600 transition">Contact Us</a>
+                </div>
+                <div class="flex md:hidden">
+                    <button type="button" class="mobile-menu-button text-white">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
             </div>
-            <div>
-              <div class="text-sm text-gray-400">Qualified Leads</div>
-              <div class="text-xl font-bold">389</div>
-            </div>
-            <!-- Add more dashboard metrics here if needed -->
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
+        
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#how-it-works" class="block px-3 py-2 text-white hover:bg-gray-800">How It Works</a>
+                <a href="#benefits" class="block px-3 py-2 text-white hover:bg-gray-800">Benefits</a>
+                <a href="#contact" class="block px-3 py-2 text-white hover:bg-gray-800">Contact</a>
+            </div>
+        </div>
+    </nav>
 
-  <!-- How It Works Section -->
-  <section id="how-it-works" class="py-16 bg-gray-100 text-gray-800">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-8">How It Works</h2>
-      <p>Your explanation on how Ranked works goes here...</p>
-    </div>
-  </section>
+    <!-- Hero Section -->
+    <section id="hero" class="pt-24 pb-20 bg-gray-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl">
+                <h1 class="text-5xl font-bold leading-tight mb-4">
+                    Let AI Tell You Who's<br>
+                    <span class="text-emerald-400">Worth Your Time.</span>
+                </h1>
+                <p class="text-lg text-gray-400 mb-6">
+                    Upload your leads and get AI-enriched insights with Ranked. Our proprietary scoring system prioritizes prospects, identifies opportunities, and helps you close deals faster.
+                </p>
+                <div class="flex flex-wrap gap-4 mb-10">
+                    <a href="#contact" class="bg-emerald-500 px-6 py-3 rounded-lg text-white font-medium flex items-center hover:bg-emerald-600 transition">
+                        Get Started <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                    <a href="#how-it-works" class="border border-gray-600 px-6 py-3 rounded-lg text-white font-medium hover:bg-gray-800 transition">
+                        Learn More
+                    </a>
+                </div>
+                
+                <!-- Dashboard Preview -->
+                <div class="dashboard-preview mt-8">
+                    <div class="mb-4">
+                        <div class="text-sm text-gray-400">Dashboard Analytics Settings</div>
+                    </div>
+                    <div class="mb-6">
+                        <div class="text-sm text-gray-400">Total Leads</div>
+                        <div class="text-xl font-bold">1,247</div>
+                    </div>
+                    <div class="mb-6">
+                        <div class="text-sm text-gray-400">Qualified Leads</div>
+                        <div class="text-xl font-bold">389</div>
+                    </div>
+                    <div class="mb-6">
+                        <div class="text-sm text-gray-400">Avg. Score</div>
+                        <div class="text-xl font-bold">76.2</div>
+                    </div>
+                    
+                    <!-- Simple Table -->
+                    <div class="dashboard-table">
+                        <div class="grid grid-cols-4 text-sm text-gray-400 mb-2">
+                            <div>Company</div>
+                            <div>Score</div>
+                            <div>Opportunity</div>
+                            <div>Strategy</div>
+                        </div>
+                        <div class="grid grid-cols-4 text-sm mb-1">
+                            <div>TechVision Inc</div>
+                            <div>92</div>
+                            <div>AI Integration</div>
+                            <div>Value-focused</div>
+                        </div>
+                        <div class="grid grid-cols-4 text-sm mb-1">
+                            <div>Quantum Data</div>
+                            <div>78</div>
+                            <div>Data Analysis</div>
+                            <div>Educational</div>
+                        </div>
+                        <div class="grid grid-cols-4 text-sm">
+                            <div>Nexus Systems</div>
+                            <div>62</div>
+                            <div>Automation</div>
+                            <div>Cost-efficient</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Scroll indicator -->
+                <div class="flex justify-center mt-20">
+                    <a href="#how-it-works" class="text-white animate-bounce">
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Benefits Section -->
-  <section id="benefits" class="py-16 bg-white text-gray-800">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-8">Benefits</h2>
-      <p>Details about the benefits of using Ranked go here...</p>
-    </div>
-  </section>
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-16 bg-gray-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl font-bold mb-4">How It Works</h2>
+                <p class="text-lg text-gray-400">
+                    Ranked transforms your lead data into actionable intelligence through our advanced analysis system.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <div class="w-14 h-14 bg-green-900/50 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-upload text-emerald-400 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Upload Excel File</h3>
+                    <p class="text-gray-400">
+                        Upload your leads in Excel format. We accept standard CSV and XLSX formats with company information.
+                    </p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <div class="w-14 h-14 bg-blue-900/50 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-brain text-blue-400 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Intelligent Analysis</h3>
+                    <p class="text-gray-400">
+                        Our advanced system combines search data with AI analysis to evaluate opportunities and potential for each company.
+                    </p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <div class="w-14 h-14 bg-green-900/50 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-bar text-emerald-400 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Scores & Strategy</h3>
+                    <p class="text-gray-400">
+                        Receive lead scores, opportunity analysis, and tailored pitch strategies for each company.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-16 bg-gray-100 text-gray-800">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-8">Contact Us</h2>
-      <p>Your contact information or a contact form goes here...</p>
-    </div>
-  </section>
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-16 bg-gray-800 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl font-bold mb-4">Benefits</h2>
+                <p class="text-lg text-gray-400">
+                    Focus on your highest-value prospects and increase your conversion rates.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Benefit 1 -->
+                <div class="bg-gray-700 p-5 rounded-lg">
+                    <div class="w-12 h-12 bg-green-900/50 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-clock text-emerald-400"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Save Time</h3>
+                    <p class="text-gray-400 text-sm">
+                        Eliminate manual lead qualification and focus your efforts on the best opportunities.
+                    </p>
+                </div>
+                
+                <!-- Benefit 2 -->
+                <div class="bg-gray-700 p-5 rounded-lg">
+                    <div class="w-12 h-12 bg-green-900/50 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-bullseye text-emerald-400"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Increase Accuracy</h3>
+                    <p class="text-gray-400 text-sm">
+                        Our AI analysis identifies patterns humans might miss in potential client data.
+                    </p>
+                </div>
+                
+                <!-- Benefit 3 -->
+                <div class="bg-gray-700 p-5 rounded-lg">
+                    <div class="w-12 h-12 bg-green-900/50 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-comments-dollar text-emerald-400"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Close More Deals</h3>
+                    <p class="text-gray-400 text-sm">
+                        Get tailored pitch strategies for each prospect based on their specific needs.
+                    </p>
+                </div>
+                
+                <!-- Benefit 4 -->
+                <div class="bg-gray-700 p-5 rounded-lg">
+                    <div class="w-12 h-12 bg-green-900/50 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-chart-line text-emerald-400"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Data-Driven Decisions</h3>
+                    <p class="text-gray-400 text-sm">
+                        Base your outreach strategy on quantitative analysis rather than gut feeling.
+                    </p>
+                </div>
+                
+                <!-- Benefit 5 -->
+                <div class="bg-gray-700 p-5 rounded-lg">
+                    <div class="w-12 h-12 bg-green-900/50 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-cogs text-emerald-400"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Easy Integration</h3>
+                    <p class="text-gray-400 text-sm">
+                        Works with your existing CRM and sales tools with minimal setup required.
+                    </p>
+                </div>
+                
+                <!-- Benefit 6 -->
+                <div class="bg-gray-700 p-5 rounded-lg">
+                    <div class="w-12 h-12 bg-green-900/50 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-shield-alt text-emerald-400"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Secure & Private</h3>
+                    <p class="text-gray-400 text-sm">
+                        Your data is encrypted and never shared with third parties.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-gray-400 py-4">
-    <div class="container mx-auto px-4 text-center">
-      &copy; 2025 Ranked. All rights reserved.
-    </div>
-  </footer>
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
+                <p class="text-lg text-gray-400">
+                    Ready to prioritize your best leads? Get in touch with us today.
+                </p>
+            </div>
+            
+            <div class="max-w-md mx-auto">
+                <form id="contact-form" class="space-y-4">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-400 mb-1">Name *</label>
+                        <input type="text" id="name" name="name" class="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-md text-white focus:ring-2 focus:ring-emerald-500 focus:border-transparent" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-400 mb-1">Email *</label>
+                        <input type="email" id="email" name="email" class="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-md text-white focus:ring-2 focus:ring-emerald-500 focus:border-transparent" required>
+                    </div>
+                    <div>
+                        <label for="company" class="block text-sm font-medium text-gray-400 mb-1">Company Name</label>
+                        <input type="text" id="company" name="company" class="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-md text-white focus:ring-2 focus:ring-emerald-500 focus:border-transparent">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-400 mb-1">Message</label>
+                        <textarea id="message" name="message" rows="4" class="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-md text-white focus:ring-2 focus:ring-emerald-500 focus:border-transparent"></textarea>
+                    </div>
+                    <div id="form-error" class="text-red-500 text-sm hidden"></div>
+                    <div id="form-success" class="text-emerald-500 text-sm hidden">
+                        Message sent! We'll be in touch soon.
+                    </div>
+                    <button type="submit" class="w-full bg-emerald-500 py-3 px-4 rounded-lg text-white font-medium hover:bg-emerald-600 transition">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
 
-  <!-- Mobile Menu Toggle Script -->
-  <script>
-    const mobileMenuButton = document.querySelector('.mobile-menu-button');
-    const mobileMenu = document.querySelector('.mobile-menu');
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-8 text-white border-t border-gray-700">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <div class="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center mr-2">
+                        <i class="fas fa-chart-bar text-white text-sm"></i>
+                    </div>
+                    <span class="text-xl font-bold text-emerald-400">Ranked</span>
+                </div>
+                <div class="text-sm text-gray-400">
+                    <p>&copy; <span id="currentYear"></span> Ranked. All rights reserved.</p>
+                    <p>AI-powered lead analysis for modern businesses.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-    mobileMenuButton.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-  </script>
+    <!-- JavaScript -->
+    <script>
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Navigation scroll effect
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-opacity-90', 'backdrop-blur-sm', 'shadow-md');
+            } else {
+                nav.classList.remove('bg-opacity-90', 'backdrop-blur-sm', 'shadow-md');
+            }
+        });
+        
+        // Handle form submission
+        const contactForm = document.getElementById('contact-form');
+        const formError = document.getElementById('form-error');
+        const formSuccess = document.getElementById('form-success');
+        
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            formError.classList.add('hidden');
+            
+            // Get form data
+            const formData = {
+                name: contactForm.querySelector('[name="name"]').value,
+                email: contactForm.querySelector('[name="email"]').value,
+                company: contactForm.querySelector('[name="company"]').value,
+                message: contactForm.querySelector('[name="message"]').value
+            };
+            
+            // Validate form
+            if (!formData.name || !formData.email) {
+                formError.textContent = 'Please fill in all required fields';
+                formError.classList.remove('hidden');
+                return;
+            }
+            
+            // Simulate sending to email service (shaunraj46@gmail.com)
+            console.log('Form submitted to shaunraj46@gmail.com:', formData);
+            
+            // For demo purposes:
+            setTimeout(() => {
+                contactForm.reset();
+                formSuccess.classList.remove('hidden');
+                
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    formSuccess.classList.add('hidden');
+                }, 5000);
+            }, 1000);
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>
