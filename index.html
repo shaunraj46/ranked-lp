@@ -6,110 +6,11 @@
     <title>Ranked - AI Lead Analysis Tool</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* 3D Hero Effects */
-        #hero-3d-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            overflow: hidden;
-            z-index: 1;
-        }
-
-        .hero-3d-element {
-            position: absolute;
-            background: linear-gradient(135deg, 
-                rgba(16, 185, 129, 0.2), 
-                rgba(6, 182, 212, 0.2)
-            );
-            border-radius: 50%;
-            filter: blur(80px);
-            opacity: 0.6;
-            animation: float 8s ease-in-out infinite alternate;
-        }
-
-        .hero-3d-element:nth-child(1) {
-            width: 600px;
-            height: 600px;
-            top: -200px;
-            right: -200px;
-            animation-delay: -2s;
-        }
-
-        .hero-3d-element:nth-child(2) {
-            width: 500px;
-            height: 500px;
-            bottom: -150px;
-            left: -150px;
-            animation-delay: -4s;
-            background: linear-gradient(135deg, 
-                rgba(14, 165, 233, 0.2), 
-                rgba(16, 185, 129, 0.2)
-            );
-        }
-
-        .hero-3d-element:nth-child(3) {
-            width: 400px;
-            height: 400px;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            animation-delay: -6s;
-            background: linear-gradient(135deg, 
-                rgba(236, 72, 153, 0.2), 
-                rgba(239, 68, 68, 0.2)
-            );
-        }
-
-        @keyframes float {
-            0% {
-                transform: translateY(0);
-            }
-            100% {
-                transform: translateY(50px);
-            }
-        }
-
-        .hero-gradient-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(
-                circle at 30% 80%, 
-                rgba(16, 185, 129, 0.1), 
-                transparent 50%
-            );
-            pointer-events: none;
-            z-index: 2;
-        }
-
-        .hero-grid-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                linear-gradient(to right, rgba(17, 24, 39, 0.03) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(17, 24, 39, 0.03) 1px, transparent 1px);
-            background-size: 30px 30px;
-            opacity: 0.3;
-            pointer-events: none;
-            z-index: 3;
-        }
-    </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav id="main-nav" class="fixed w-full z-50 transition-all py-6">
+    <!-- Enhanced Navigation -->
+    <nav id="main-nav" class="fixed w-full z-50 py-6">
         <div class="container">
             <div class="nav-content">
                 <div class="logo">
@@ -126,95 +27,94 @@
                 <button class="premium-button">
                     <span class="button-background"></span>
                     <span class="button-background-hover"></span>
-                    <span class="button-content">Contact Us</span>
+                    <span class="button-content">Get Demo</span>
                 </button>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="hero" class="pt-40 pb-20 px-4 relative overflow-hidden">
-        <div id="hero-3d-container">
-            <div class="hero-3d-element"></div>
-            <div class="hero-3d-element"></div>
-            <div class="hero-3d-element"></div>
-        </div>
-        <div class="hero-gradient-overlay"></div>
-        <div class="hero-grid-overlay"></div>
+    <!-- Hero Section with 3D Elements -->
+    <section id="hero" class="pt-40 pb-32 px-4 relative overflow-hidden">
+        <div class="hero-bg-1"></div>
+        <div class="hero-bg-2"></div>
         
         <div class="container relative z-10">
             <div class="hero-grid">
+                <!-- Hero Content Column -->
                 <div class="hero-content">
                     <h1 class="hero-title">
-                        Let AI Tell You Who's<br>
-                        <span class="gradient-text">Worth Your Time.</span>
+                        AI-Powered Lead<br>
+                        <span class="gradient-text">Prioritization Engine</span>
                     </h1>
                     <p class="hero-subtitle">
-                        Upload your leads and get AI-enriched insights with Ranked. Our proprietary scoring system prioritizes prospects, identifies opportunities, and helps you close deals faster.
+                        Transform raw leads into strategic opportunities with our neural network scoring system. 
+                        Focus only on prospects worth your time.
                     </p>
                     <div class="hero-buttons">
-                        <a href="#contact" class="premium-button-primary">
-                            <span class="button-background"></span>
-                            <span class="button-background-hover"></span>
-                            <span class="button-border"></span>
+                        <a href="#contact" class="premium-button-primary glow-on-hover">
                             <span class="button-content">
-                                Get Started <i class="fas fa-arrow-right button-icon"></i>
+                                Start Free Trial <i class="fas fa-rocket button-icon"></i>
                             </span>
                         </a>
-                        <a href="#how-it-works" class="premium-button-secondary">
-                            <span class="button-border"></span>
-                            <span class="button-hover-bg"></span>
-                            <span class="button-content">Learn More</span>
-                        </a>
                     </div>
-                </div>
-                
-                <div class="contact-form-container mt-8 md:mt-0">
-                    <div class="contact-form-wrapper">
-                        <h3 class="form-title">Contact Us</h3>
-                        <div id="form-success" class="form-success hidden">
-                            <i class="fas fa-check"></i>
-                            <p>Message sent! We'll be in touch soon.</p>
+                    
+                    <!-- Trust Badges -->
+                    <div class="trust-badges">
+                        <div class="badge-item">
+                            <div class="icon-box">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <span>Enterprise-Grade Security</span>
                         </div>
-                        <form id="contact-form" class="contact-form">
-                            <div class="form-group">
-                                <label for="name">Name *</label>
-                                <input type="text" id="name" name="name" required>
+                        <div class="badge-item">
+                            <div class="icon-box">
+                                <i class="fas fa-brain"></i>
                             </div>
-                            <div class="form-group">
-                                <label for="email">Email *</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="company">Company Name</label>
-                                <input type="text" id="company" name="company">
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea id="message" name="message" rows="4"></textarea>
-                            </div>
-                            <div id="form-error" class="form-error hidden"></div>
-                            <button type="submit" class="form-submit-button">
-                                <span class="button-background"></span>
-                                <span class="button-shine"></span>
-                                <span class="button-overlay"></span>
-                                <span class="button-content">Send Message</span>
-                            </button>
-                        </form>
+                            <span>Proprietary AI Models</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="scroll-indicator">
-                <a href="#how-it-works" class="scroll-button">
-                    <span class="scroll-bg"></span>
-                    <span class="scroll-inner"></span>
-                    <i class="fas fa-chevron-down"></i>
-                </a>
+
+                <!-- 3D Dashboard Card -->
+                <div class="dashboard-3d">
+                    <div class="card-inner">
+                        <div class="card-face front">
+                            <div class="gloss-overlay"></div>
+                            <div class="card-content">
+                                <div class="sparkles">
+                                    <div class="sparkle"></div>
+                                    <div class="sparkle"></div>
+                                    <div class="sparkle"></div>
+                                </div>
+                                <h3 class="card-title">Lead Intelligence Matrix</h3>
+                                <div class="data-visualization">
+                                    <div class="radial-progress" style="--value:85">
+                                        <span class="progress-value">85%</span>
+                                    </div>
+                                    <div class="legend">
+                                        <div class="legend-item high">High Potential</div>
+                                        <div class="legend-item medium">Medium</div>
+                                        <div class="legend-item low">Low</div>
+                                    </div>
+                                </div>
+                                <div class="stats-grid">
+                                    <div class="stat">
+                                        <div class="stat-value">92x</div>
+                                        <div class="stat-label">ROI Increase</div>
+                                    </div>
+                                    <div class="stat">
+                                        <div class="stat-value">48%</div>
+                                        <div class="stat-label">Faster Closing</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-
+    
     <!-- How it Works -->
     <section id="how-it-works" class="py-20 px-4 bg-section">
         <div class="container">
@@ -478,7 +378,7 @@
         </div>
     </section>
 
-    <!-- Final CTA Section -->
+    <!-- Final CTA Section (Contact Form at the Bottom) -->
     <section id="contact" class="py-20 px-4 relative">
         <div class="cta-bg-1"></div>
         <div class="cta-bg-2"></div>
