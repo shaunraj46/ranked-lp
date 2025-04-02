@@ -294,6 +294,10 @@ button {
 }
 
 /* Hero Section */
+#hero {
+    position: relative;
+}
+
 .hero-bg-1 {
     position: absolute;
     top: 0;
@@ -312,15 +316,22 @@ button {
     background: radial-gradient(circle at 70% 80%, rgba(14, 165, 233, 0.2), transparent 40%);
 }
 
-.hero-buttons {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
-    flex-wrap: wrap;
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
 }
 
-.justify-center {
-    justify-content: center;
+@media (min-width: 992px) {
+    .hero-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 .hero-title {
@@ -353,6 +364,12 @@ button {
     }
 }
 
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
 /* Contact Form */
 .contact-form-container {
     max-width: 100%;
@@ -370,24 +387,6 @@ button {
     padding: 1.5rem;
     border-radius: 0.5rem;
     backdrop-filter: blur(4px);
-}
-
-.contact-bg-1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at 10% 30%, rgba(4, 120, 87, 0.2), transparent 35%);
-}
-
-.contact-bg-2 {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at 90% 70%, rgba(14, 165, 233, 0.2), transparent 35%);
 }
 
 .form-title {
@@ -425,7 +424,6 @@ button {
     padding: 0.75rem;
     color: white;
     transition: all 0.3s ease;
-    margin-top: 0.25rem;
 }
 
 .form-group input:focus,
@@ -547,31 +545,381 @@ button {
     margin: 0 auto;
 }
 
-/* Perspective Elements */
-.perspective-element {
-    perspective: 1000px;
-    transform-style: preserve-3d;
-    transform: perspective(1000px);
+/* Steps Section */
+.steps-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
 }
 
-.floating {
-    animation: float 6s ease-in-out infinite;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+@media (min-width: 768px) {
+    .steps-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
-@keyframes float {
-    0% {
-        transform: translateY(0px) rotate(1deg);
+.step-card {
+    background: linear-gradient(to bottom right, var(--color-dark), var(--color-darker));
+    padding: 0.25rem;
+    border-radius: 0.75rem;
+    transition: transform 0.3s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-0.5rem);
+}
+
+.step-card-content {
+    background-color: var(--color-darker);
+    height: 100%;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+}
+
+.step-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: rgba(16, 185, 129, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.step-icon.cyan {
+    background-color: rgba(6, 182, 212, 0.2);
+}
+
+.step-card:hover .step-icon {
+    background-color: rgba(16, 185, 129, 0.3);
+}
+
+.step-card:hover .step-icon.cyan {
+    background-color: rgba(6, 182, 212, 0.3);
+}
+
+.step-icon i {
+    font-size: 1.75rem;
+    color: var(--color-emerald-light);
+}
+
+.step-icon.cyan i {
+    color: var(--color-cyan-light);
+}
+
+.step-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.step-description {
+    color: var(--color-lighter);
+}
+
+/* Features Section */
+.features-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+@media (min-width: 992px) {
+    .features-grid {
+        grid-template-columns: 1fr 1fr;
     }
-    50% {
-        transform: translateY(-15px) rotate(2deg);
-    }
-    100% {
-        transform: translateY(0px) rotate(1deg);
-    }
+}
+
+.features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.feature-item {
+    background-color: rgba(17, 24, 39, 0.5);
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    border: 1px solid var(--color-light);
+    display: flex;
+    transition: border-color 0.3s ease;
+}
+
+.feature-item:hover {
+    border-color: rgba(16, 185, 129, 0.5);
+}
+
+.feature-icon {
+    background-color: rgba(16, 185, 129, 0.2);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    margin-right: 1rem;
+    height: fit-content;
+}
+
+.feature-icon i {
+    color: var(--color-emerald-light);
+}
+
+.feature-icon.cyan {
+    background-color: rgba(6, 182, 212, 0.2);
+}
+
+.feature-icon.cyan i {
+    color: var(--color-cyan-light);
+}
+
+.feature-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.feature-description {
+    color: var(--color-lighter);
+}
+
+/* Excel Preview */
+.excel-preview {
+    background: linear-gradient(to bottom right, var(--color-dark), var(--color-darker));
+    padding: 0.25rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.excel-window {
+    background-color: var(--color-darker);
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.window-controls {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.control {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    margin-right: 0.25rem;
+}
+
+.control.red {
+    background-color: #ef4444;
+}
+
+.control.yellow {
+    background-color: #eab308;
+}
+
+.control.green {
+    background-color: #22c55e;
+}
+
+.window-title {
+    font-size: 0.75rem;
+    color: var(--color-lighter);
+    margin-left: 0.5rem;
+}
+
+.excel-content {
+    background-color: var(--color-medium);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    overflow-x: auto;
+    margin-bottom: 1rem;
+}
+
+.excel-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+}
+
+.excel-table th,
+.excel-table td {
+    padding: 0.5rem;
+    text-align: left;
+}
+
+.excel-table th {
+    background-color: rgba(55, 65, 81, 0.3);
+    font-weight: 500;
+}
+
+.excel-table th:first-child {
+    border-top-left-radius: 0.5rem;
+}
+
+.excel-table th:last-child {
+    border-top-right-radius: 0.5rem;
+}
+
+.excel-table tr {
+    border-bottom: 1px solid rgba(107, 114, 128, 0.3);
+}
+
+.excel-table tr:last-child {
+    border-bottom: none;
+}
+
+.excel-table .highlight-row {
+    background-color: rgba(16, 185, 129, 0.1);
+}
+
+.excel-table .score {
+    font-weight: 500;
+}
+
+.excel-table .score.high {
+    color: var(--color-emerald-light);
+}
+
+.excel-table .score.medium {
+    color: #eab308;
+}
+
+.excel-table .score.low {
+    color: #ef4444;
+}
+
+.excel-caption {
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--color-light);
+}
+
+/* FAQ Section */
+.faq-container {
+    max-width: 48rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.faq-item {
+    background: linear-gradient(to bottom right, rgba(55, 65, 81, 0.7), rgba(17, 24, 39, 0.7));
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.faq-item:hover .faq-question h3 {
+    color: var(--color-emerald-light);
+}
+
+.faq-toggle {
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.toggle-bg {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background-color: rgba(16, 185, 129, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.faq-item.active .toggle-bg {
+    opacity: 1;
+}
+
+.faq-toggle i {
+    position: relative;
+    z-index: 1;
+}
+
+.icon-plus {
+    color: var(--color-cyan-light);
+    display: block;
+}
+
+.icon-minus {
+    color: var(--color-emerald-light);
+    display: none;
+}
+
+.faq-item.active .icon-plus {
+    display: none;
+}
+
+.faq-item.active .icon-minus {
+    display: block;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 20rem;
+}
+
+.faq-answer p {
+    padding: 0 1.5rem 1.5rem;
+    border-top: 1px solid var(--color-light);
+    background-color: rgba(17, 24, 39, 0.3);
+    color: var(--color-lighter);
+}
+
+/* CTA Section */
+.cta-bg-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 10% 50%, rgba(4, 120, 87, 0.2), transparent 35%);
+}
+
+.cta-bg-2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 90% 20%, rgba(14, 165, 233, 0.2), transparent 35%);
+}
+
+.cta-form-container {
+    max-width: 28rem;
+    margin: 0 auto;
 }
 
 /* Footer */
+footer {
+    background-color: var(--color-darker);
+    padding: 2.5rem 0;
+    border-top: 1px solid var(--color-dark);
+}
+
 .footer-content {
     display: flex;
     flex-direction: column;
@@ -591,6 +939,11 @@ button {
     align-items: center;
 }
 
+.footer-logo .logo-icon {
+    width: 2rem;
+    height: 2rem;
+}
+
 .footer-info {
     font-size: 0.875rem;
     color: var(--color-lighter);
@@ -601,92 +954,4 @@ button {
     .footer-info {
         text-align: right;
     }
-}
-
-/* Reveal animations */
-.reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease;
-}
-
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.reveal-delay-1 {
-    transition-delay: 0.1s;
-}
-
-.reveal-delay-2 {
-    transition-delay: 0.2s;
-}
-
-.reveal-delay-3 {
-    transition-delay: 0.3s;
-}
-
-.reveal-delay-4 {
-    transition-delay: 0.4s;
-}
-
-/* Glass Card */
-.glass-card {
-    backdrop-filter: blur(10px);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.glass-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-}
-
-/* 3D Button */
-.btn-3d {
-    position: relative;
-    transform: translateY(0);
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-    box-shadow: 
-        0 4px 6px -1px rgba(0, 0, 0, 0.1), 
-        0 2px 4px -1px rgba(0, 0, 0, 0.06),
-        0 0 0 0 rgba(16, 185, 129, 0.1);
-}
-
-.btn-3d:hover {
-    transform: translateY(-2px);
-    box-shadow: 
-        0 10px 15px -3px rgba(0, 0, 0, 0.1), 
-        0 4px 6px -2px rgba(0, 0, 0, 0.05),
-        0 0 0 2px rgba(16, 185, 129, 0.2);
-}
-
-.btn-3d:active {
-    transform: translateY(0);
-    box-shadow: 
-        0 2px 4px -1px rgba(0, 0, 0, 0.1), 
-        0 1px 2px -1px rgba(0, 0, 0, 0.06),
-        0 0 0 2px rgba(16, 185, 129, 0.4);
-}
-
-/* Feature Cards */
-.feature-card:hover .feature-icon {
-    transform: scale(1.1);
-}
-
-.feature-icon {
-    transition: transform 0.3s ease;
-}
-
-/* FAQ Accordions */
-.faq-toggle {
-    width: 100%;
-}
-
-.faq-icon {
-    transition: transform 0.3s ease;
-}
-
-.faq-item.active .faq-icon {
-    transform: rotate(45deg);
 }
