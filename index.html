@@ -42,6 +42,7 @@
         
         <div class="container relative z-10">
             <div class="hero-grid">
+                <!-- Hero Content Column -->
                 <div class="hero-content">
                     <h1 class="hero-title">
                         Let AI Tell You Who's<br>
@@ -66,39 +67,21 @@
                         </a>
                     </div>
                 </div>
-                
-                <div class="contact-form-container">
-                    <div class="contact-form-wrapper">
-                        <h3 class="form-title">Contact Us</h3>
-                        <div id="form-success" class="form-success hidden">
-                            <i class="fas fa-check"></i>
-                            <p>Message sent! We'll be in touch soon.</p>
+
+                <!-- Dashboard Preview Column (Replaces top contact form) -->
+                <div class="dashboard-preview">
+                    <div class="dashboard-card" style="background: rgba(17,24,39,0.8); padding: 1.5rem; border-radius: 0.5rem;">
+                        <h2 class="dashboard-title" style="font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem;">Dashboard Overview</h2>
+                        <div class="dashboard-stats" style="display: flex; gap: 2rem;">
+                            <div class="dashboard-stat">
+                                <p class="stat-label" style="color: var(--color-lighter);">Total Leads</p>
+                                <p class="stat-value" style="font-size: 1.25rem; font-weight: 700;">1,247</p>
+                            </div>
+                            <div class="dashboard-stat">
+                                <p class="stat-label" style="color: var(--color-lighter);">Qualified Leads</p>
+                                <p class="stat-value" style="font-size: 1.25rem; font-weight: 700;">389</p>
+                            </div>
                         </div>
-                        <form id="contact-form" class="contact-form">
-                            <div class="form-group">
-                                <label for="name">Name *</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email *</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="company">Company Name</label>
-                                <input type="text" id="company" name="company">
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea id="message" name="message" rows="4"></textarea>
-                            </div>
-                            <div id="form-error" class="form-error hidden"></div>
-                            <button type="submit" class="form-submit-button">
-                                <span class="button-background"></span>
-                                <span class="button-shine"></span>
-                                <span class="button-overlay"></span>
-                                <span class="button-content">Send Message</span>
-                            </button>
-                        </form>
                     </div>
                 </div>
             </div>
@@ -376,7 +359,7 @@
         </div>
     </section>
 
-    <!-- Final CTA Section -->
+    <!-- Final CTA Section (Contact Form at the Bottom) -->
     <section id="contact" class="py-20 px-4 relative">
         <div class="cta-bg-1"></div>
         <div class="cta-bg-2"></div>
