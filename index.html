@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranked - AI Lead Analysis Tool</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="main-nav" class="fixed w-full z-50 transition-all py-4">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <span class="logo-text">Ranked</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#how-it-works" class="nav-link">How It Works</a>
+                    <a href="#benefits" class="nav-link">Benefits</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+                <button class="premium-button">
+                    <span class="button-background"></span>
+                    <span class="button-background-hover"></span>
+                    <span class="button-content">Contact Us</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="pt-32 pb-20 px-4 relative overflow-hidden">
+        <div class="hero-bg-1"></div>
+        <div class="hero-bg-2"></div>
+        
+        <div class="container relative z-10">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Let AI Tell You Who's<br>
+                        <span class="gradient-text">Worth Your Time.</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Upload your leads and get AI-enriched insights with Ranked. Our proprietary scoring system prioritizes prospects, identifies opportunities, and helps you close deals faster.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="premium-button-primary">
+                            <span class="button-background"></span>
+                            <span class="button-background-hover"></span>
+                            <span class="button-border"></span>
+                            <span class="button-content">
+                                Get Started <i class="fas fa-arrow-right button-icon"></i>
+                            </span>
+                        </a>
+                        <a href="#how-it-works" class="premium-button-secondary">
+                            <span class="button-border"></span>
+                            <span class="button-hover-bg"></span>
+                            <span class="button-content">Learn More</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <div class="contact-form-wrapper">
+                        <h3 class="form-title">Contact Us</h3>
+                        <div id="form-success" class="form-success hidden">
+                            <i class="fas fa-check"></i>
+                            <p>Message sent! We'll be in touch soon.</p>
+                        </div>
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Company Name</label>
+                                <input type="text" id="company" name="company">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="4"></textarea>
+                            </div>
+                            <div id="form-error" class="form-error hidden"></div>
+                            <button type="submit" class="form-submit-button">
+                                <span class="button-background"></span>
+                                <span class="button-shine"></span>
+                                <span class="button-overlay"></span>
+                                <span class="button-content">Send Message</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator">
+                <a href="#how-it-works" class="scroll-button">
+                    <span class="scroll-bg"></span>
+                    <span class="scroll-inner"></span>
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works -->
+    <section id="how-it-works" class="py-20 px-4 bg-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-subtitle">Ranked transforms your lead data into actionable intelligence through our advanced analysis system.</p>
+            </div>
+            
+            <div class="steps-grid">
+                <!-- Step 1 -->
+                <div class="step-card">
+                    <div class="step-card-content">
+                        <div class="step-icon">
+                            <i class="fas fa-upload"></i>
+                        </div>
+                        <h3 class="step-title">Upload Excel File</h3>
+                        <p class="step-description">Upload your leads in Excel format. We accept standard CSV and XLSX formats with company information.</p>
+                    </div>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="step-card">
+                    <div class="step-card-content">
+                        <div class="step-icon cyan">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3 class="step-title">Intelligent Analysis</h3>
+                        <p class="step-description">Our advanced system combines search data with AI analysis to evaluate opportunities and potential for each company.</p>
+                    </div>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="step-card">
+                    <div class="step-card-content">
+                        <div class="step-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h3 class="step-title">Scores & Strategy</h3>
+                        <p class="step-description">Receive lead scores, opportunity analysis, and tailored pitch strategies for each company.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You Get -->
+    <section id="features" class="py-20 px-4">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What You Get</h2>
+                <p class="section-subtitle">Advanced insights that transform your lead management process.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="features-list">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">Lead Score (0-100)</h3>
+                            <p class="feature-description">Each company receives a quantified score based on AI analysis of their fit for AI consulting.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon cyan">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">AI Consulting Potential</h3>
+                            <p class="feature-description">Detailed analysis of the specific AI opportunities relevant to each prospect.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">Custom Pitch Strategy</h3>
+                            <p class="feature-description">Tailored approach recommendations for each company, improving your conversion rate.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="excel-preview">
+                    <div class="excel-window">
+                        <div class="window-controls">
+                            <div class="control red"></div>
+                            <div class="control yellow"></div>
+                            <div class="control green"></div>
+                            <div class="window-title">enriched_leads.xlsx</div>
+                        </div>
+                        <div class="excel-content">
+                            <table class="excel-table">
+                                <thead>
+                                    <tr>
+                                        <th>Company Name</th>
+                                        <th>Lead Score</th>
+                                        <th>AI Potential</th>
+                                        <th>Approach</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="highlight-row">
+                                        <td>TechVision Inc</td>
+                                        <td class="score high">92</td>
+                                        <td>High</td>
+                                        <td>Value-focused</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Quantum Data</td>
+                                        <td class="score medium">78</td>
+                                        <td>Medium</td>
+                                        <td>Educational</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Nexus Systems</td>
+                                        <td class="score low">62</td>
+                                        <td>Low</td>
+                                        <td>Cost-efficient</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Future Finance</td>
+                                        <td class="score high">88</td>
+                                        <td>High</td>
+                                        <td>ROI-focused</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="excel-caption">Sample enriched output file</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="benefits" class="py-20 px-4 bg-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Everything you need to know about how Ranked transforms your lead qualification process.</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How does the AI scoring system work?</h3>
+                        <button class="faq-toggle">
+                            <span class="toggle-bg"></span>
+                            <i class="fas fa-plus icon-plus"></i>
+                            <i class="fas fa-minus icon-minus"></i>
+                        </button>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our proprietary scoring algorithm evaluates each company using multiple data sources. We analyze industry, size, described problems, and online presence, then apply our specialized business intelligence models. The result is a comprehensive score from 0-100, with higher scores indicating better potential for AI consulting services.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What file formats are supported for upload?</h3>
+                        <button class="faq-toggle">
+                            <span class="toggle-bg"></span>
+                            <i class="fas fa-plus icon-plus"></i>
+                            <i class="fas fa-minus icon-minus"></i>
+                        </button>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ranked currently supports Excel (.xlsx, .xls) and CSV file formats. Your data should include company names, company size, and description fields for best results. Additional fields like industry and problems/needs will enhance the analysis.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How secure is my data?</h3>
+                        <button class="faq-toggle">
+                            <span class="toggle-bg"></span>
+                            <i class="fas fa-plus icon-plus"></i>
+                            <i class="fas fa-minus icon-minus"></i>
+                        </button>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We take data security seriously. All uploads are encrypted in transit and at rest. Our system processes your data using enterprise-grade security protocols and never shares your information with third parties. Processed files are automatically deleted after 24 hours.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How accurate is the AI analysis?</h3>
+                        <button class="faq-toggle">
+                            <span class="toggle-bg"></span>
+                            <i class="fas fa-plus icon-plus"></i>
+                            <i class="fas fa-minus icon-minus"></i>
+                        </button>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our system combines multiple analytical approaches and has been thoroughly tested against expert evaluations. While no automated analysis is perfect, our proprietary system typically identifies high-value leads with 85-90% accuracy when compared to manual expert evaluation.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How long does it take to process my data?</h3>
+                        <button class="faq-toggle">
+                            <span class="toggle-bg"></span>
+                            <i class="fas fa-plus icon-plus"></i>
+                            <i class="fas fa-minus icon-minus"></i>
+                        </button>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Processing time depends on the number of companies in your dataset. Typically, analysis takes 5-10 seconds per company. A dataset of 100 companies would be processed in approximately 10-15 minutes.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I integrate Ranked with my CRM system?</h3>
+                        <button class="faq-toggle">
+                            <span class="toggle-bg"></span>
+                            <i class="fas fa-plus icon-plus"></i>
+                            <i class="fas fa-minus icon-minus"></i>
+                        </button>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer integration with popular CRM platforms including Salesforce, HubSpot, and Pipedrive. Our API allows for custom integrations with other systems. Contact us for specific integration requirements.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do I need technical knowledge to use Ranked?</h3>
+                        <button class="faq-toggle">
+                            <span class="toggle-bg"></span>
+                            <i class="fas fa-plus icon-plus"></i>
+                            <i class="fas fa-minus icon-minus"></i>
+                        </button>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No technical knowledge is required. If you can upload an Excel file, you can use Ranked. The interface is designed to be intuitive, and the output is delivered in an easy-to-understand format with clear recommendations.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What's included in the pricing?</h3>
+                        <button class="faq-toggle">
+                            <span class="toggle-bg"></span>
+                            <i class="fas fa-plus icon-plus"></i>
+                            <i class="fas fa-minus icon-minus"></i>
+                        </button>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our pricing is based on the number of leads processed per month. All plans include the core AI analysis, lead scoring, opportunity identification, and strategy recommendations. Enterprise plans include additional features like API access, custom integrations, and dedicated support.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section id="contact" class="py-20 px-4 relative">
+        <div class="cta-bg-1"></div>
+        <div class="cta-bg-2"></div>
+        
+        <div class="container relative z-10">
+            <div class="section-header">
+                <h2 class="section-title">Want to see how Ranked can qualify your leads?</h2>
+                <p class="section-subtitle">Contact us today for more information about how Ranked can transform your lead qualification process.</p>
+            </div>
+            
+            <div class="cta-form-container">
+                <div class="contact-form-wrapper">
+                    <h3 class="form-title">Get in Touch</h3>
+                    <div id="form-success-bottom" class="form-success hidden">
+                        <i class="fas fa-check"></i>
+                        <p>Message sent! We'll be in touch soon.</p>
+                    </div>
+                    <form id="contact-form-bottom" class="contact-form">
+                        <div class="form-group">
+                            <label for="name2">Name *</label>
+                            <input type="text" id="name2" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email2">Email *</label>
+                            <input type="email" id="email2" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company2">Company Name</label>
+                            <input type="text" id="company2" name="company">
+                        </div>
+                        <div class="form-group">
+                            <label for="message2">Message</label>
+                            <textarea id="message2" name="message" rows="4"></textarea>
+                        </div>
+                        <div id="form-error-bottom" class="form-error hidden"></div>
+                        <button type="submit" class="form-submit-button">
+                            <span class="button-background"></span>
+                            <span class="button-shine"></span>
+                            <span class="button-overlay"></span>
+                            <span class="button-content">Send Message</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark py-10 border-t">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <span class="logo-text">Ranked</span>
+                </div>
+                
+                <div class="footer-info">
+                    <p>&copy; <span id="currentYear"></span> Ranked. All rights reserved.</p>
+                    <p>AI-powered lead analysis for modern businesses.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
